@@ -1,5 +1,8 @@
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
+import { blogs } from "@/app/blogs/blogs";
+import Image from "next/image";
+import Link from "next/link";
 
 const Blogs = () => {
   return (
@@ -13,15 +16,16 @@ const Blogs = () => {
         Just a little chatting and writing out my thoughts and updates 
       </p>
 
-      <div className="flex justify-center gap-14 mt-10 flex-col lg:flex-row">
+      <div className="flex justify-center gap-10 mt-10 flex-col lg:flex-row">
         {blogs.map((item, index) => (
-          <div
+          <Link
+          href={`/blogs/${index}`}
             key={index}
-            className="relative overflow-hidden rounded-xl mx-5 lg:w-1/4 aspect-[5/4] lg:aspect-square group cursor-pointer"
+            className="relative overflow-hidden rounded-xl mx-2 lg:w-[26%] aspect-[5/4]  group cursor-pointer"
           >
-            <img
+            <Image
               alt="blog cover"
-              src={item.image}
+              src={item.cover}
               className="w-full h-full object-cover absolute group-hover:scale-105 group-hover:brightness-125 duration-300"
             />
             <div className="absolute bottom-5 rounded-2xl bg-[#2C1658] bg-opacity-70 group-hover:bg-opacity-100 duration-300 backdrop-blur-xl w-5/6 left-1/2 translate-x-[-50%]  p-4">
@@ -29,31 +33,14 @@ const Blogs = () => {
                 <FaCalendarAlt />
                 {item.date}
               </p>
-              <h3 className="font-bold text-lg">{item.title}</h3>
+              <h3 className="font-bold text-lg line-clamp-2">{item.title}</h3>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
   );
 };
 
-const blogs = [
-  {
-    image: "https://themejunction.net/html/gerold/demo/assets/img/blog/1.jpg",
-    title: "Top 20 UI/UX Designers",
-    date: "Oct 01, 2022",
-  },
-  {
-    image: "https://themejunction.net/html/gerold/demo/assets/img/blog/2.jpg",
-    title: "Top 20 UI/UX Designers",
-    date: "Oct 01, 2022",
-  },
-  {
-    image: "https://themejunction.net/html/gerold/demo/assets/img/blog/3.jpg",
-    title: "Top 20 UI/UX Designers",
-    date: "Oct 01, 2022",
-  },
-];
 
 export default Blogs;
