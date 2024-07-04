@@ -32,6 +32,7 @@ const Services = () => {
               key={index}
               className="md:basis-[48%] p-8 flex flex-col gap-5 bg-brand bg-opacity-15 hover:bg-opacity-100 hover:translate-y-[-10px] mt-5 duration-300 rounded-xl group cursor-pointer "
             >
+              <Link href="/contact" className="flex flex-col gap-5">
               <div className=" group-hover:text-white duration-300">
                 {item.icon}
               </div>
@@ -39,6 +40,7 @@ const Services = () => {
                 {item.title}
               </h3>
               <p className="">{item.description}</p>
+              </Link>
             </motion.div>
           ))}
         </div>

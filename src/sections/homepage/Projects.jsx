@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <section className="flex flex-col items-center py-10 lg:py-16 bg-abstract relative">
+    <section className="flex overflow-hidden flex-col items-center py-10 lg:py-16 bg-abstract relative">
       <div className="absolute top-0 z-0 w-full h-full bg-black opacity-80" />
       <div className="text-center relative">
         <h2 className="text-4xl mt-10 lg:mt-0 lg:text-5xl font-bold text-center mb-2 md:mb-5 bg-gradient-to-r from-brand to-white text-transparent bg-clip-text">

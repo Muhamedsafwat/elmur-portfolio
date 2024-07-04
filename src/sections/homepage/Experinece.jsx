@@ -5,7 +5,7 @@ import { FaAward, FaGraduationCap } from "react-icons/fa";
 
 const Experinece = () => {
   return (
-    <section className="max-w-7xl mx-auto gap-10 lg:gap-20 flex flex-col lg:flex-row justify-between py-10 lg:py-20 px-3">
+    <section className="max-w-7xl overflow-hidden mx-auto gap-10 lg:gap-20 flex flex-col lg:flex-row justify-between py-10 lg:py-20 px-3">
       <div className="w-full">
         <h2 className="mb-12 bg-gradient-to-r from-brand to-white text-transparent bg-clip-text font-extrabold text-3xl lg:text-5xl">
           <FaAward className="text-brand inline" />
