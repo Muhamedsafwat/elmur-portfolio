@@ -17,7 +17,8 @@ const Projects = () => {
           Projects
         </h2>
         <p className="max-w-2xl text-center text-lg mx-6 lg:mx-auto">
-         These are the projects I worked on along side my team and developed it from scratch to where it is today 
+          These are the projects I worked on along side my team and developed it
+          from scratch to where it is today
         </p>
       </div>
       <div className="space-y-20 lg:space-y-32 relative mt-20">
@@ -44,7 +45,9 @@ const Projects = () => {
               <p className="text-sm lg:text-base">{item.description}</p>
 
               <Link
-                href={`/projects/${item.title.toLocaleLowerCase()}`}
+                href={`/projects/${item.title
+                  .toLocaleLowerCase()
+                  .replace(" ", "-")}`}
                 className="w-fit"
               >
                 <p className="mt-5 text-brand text-xl hover:underline">
@@ -63,7 +66,7 @@ const Projects = () => {
             >
               <div className="bg-black size-60 lg:size-72 flex items-center rounded-lg justify-center">
                 <Image
-                alt={item.title}
+                  alt={item.title}
                   src={item.image}
                   className="object-fit size-52 lg:size-64 group-hover:scale-105  grayscale duration-300 group-hover:grayscale-0"
                 />
@@ -79,21 +82,21 @@ const Projects = () => {
 const projects = [
   {
     image: imtyaz,
-    title: "Imtyaz",
+    title: "Imtyaze",
     description:
       "We try in Imtyaz to improve the learning experience that our students have by enhancing the material with animations and graphics that help the understanding process and make it all over fun experience ",
   },
   {
     image: seven,
-    title: "Seven",
+    title: "Byteforce",
     description:
-      "In our production team we always focus on producing the most out of what it avaliable and create something that we are as a team very proud to share to the world "
+      "In our production team we always focus on producing the most out of what it avaliable and create something that we are as a team very proud to share to the world ",
   },
   {
     image: trust,
-    title: "Trust Plus",
+    title: "Circle investments",
     description:
-      "We always focus in trust plus that we innovate and create new ways and ideas that transform the real estate market and elevate our company and achieve our vision"
+      "We always focus in Circle to innovate and create new ways and ideas that transform the real estate market and elevate our company and achieve our vision",
   },
 ];
 

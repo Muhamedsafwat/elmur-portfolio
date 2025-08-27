@@ -76,10 +76,12 @@ const NavBar = () => {
                     <Link href="/projects/imtyaz">- Imtyaz</Link>
                   </li>
                   <li className={listItemStyle}>
-                    <Link href="/projects/seven">- Seven</Link>
+                    <Link href="/projects/byteforce">- Byteforce</Link>
                   </li>
                   <li className={listItemStyle}>
-                    <Link href="/projects/trust-plus">- Trust Plus</Link>
+                    <Link href="/projects/circle-investments">
+                      - Circle investments
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -108,9 +110,7 @@ const NavBar = () => {
             >
               <IoIosClose size={40} />
             </button>
-            <ul
-              className="space-y-5 text-lg font-medium"
-            >
+            <ul className="space-y-5 text-lg font-medium">
               <li onClick={() => setIsOpen(false)} className={listItemStyle}>
                 <Link href="/">Home</Link>
               </li>

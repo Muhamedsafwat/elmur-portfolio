@@ -31,11 +31,11 @@ const Footer = () => {
         <p className="text-brand text-sm hidden lg:block">
           © 2024 All rights reserved, Developed by{" "}
           <a
-            href="http://muhamedsafwat.com"
+            href="http://byteforceinc.com/codex"
             target="_blank"
             className="text-brand"
           >
-            Muhamed Safwat
+            Codex
           </a>
         </p>
         <ul className="flex items-center justify-center gap-3 font-medium">

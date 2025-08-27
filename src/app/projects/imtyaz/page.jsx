@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import Image from "next/image";
+import { BiLink } from "react-icons/bi";
 //import images
 import bg from "@/assets/imtyazbg.png";
 
@@ -10,16 +11,27 @@ const page = () => {
     <div>
       <section className="bg-brand bg-opacity-5 relative  overflow-hidden">
         <div className="absolute h-full w-full top-0 z-0">
-          <Image alt="cover image" src={bg} className="object-cover w-full object-center" />
+          <Image
+            alt="cover image"
+            src={bg}
+            className="object-cover w-full object-center"
+          />
         </div>
         <div className="w-full h-full bg-black relative backdrop-blur-sm py-24 lg:py-44 bg-opacity-50">
-          <div className="max-w-7xl mx-auto text-center ">
+          <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
             <h1 className=" text-5xl lg:text-[6rem] font-bold text-center bg-gradient-to-r from-brand to-white text-transparent bg-clip-text">
               IMTYAZ
             </h1>
             <p className="text-xl lg:text-2xl font-medium text-gray-300 tracking-widest">
               Education Made Fun
             </p>
+            <a
+              href="imtyaze.com"
+              className="flex items-center gap-1 text-lg mt-5"
+            >
+              <BiLink />
+              imtyaze.com
+            </a>
           </div>
         </div>
       </section>
@@ -39,11 +51,11 @@ const CounterSection = () => {
       text: "Videos",
     },
     {
-      number: 15,
+      number: 50,
       text: "Courses",
     },
     {
-      number: 5,
+      number: 20,
       text: "Instructors",
     },
     {
@@ -70,10 +82,11 @@ const CounterSection = () => {
 //-------------Story section-----------------
 const OurStory = () => {
   const storylines = [
-    "While working on our team Seven we realised that we have to make our own project that represents what we stand for",
-    "We identified that we have a problem in our e-learning systems that it is just too plain and boring",
-    "We came up with Imtyaz where we mix graphics and production with the information you are used to in a normal course",
-    "We focus on each and every detail to ensure that the learning experience is fun and enaging as possible",
+    "The Spark (Idea Stage) It all started while working with our team at Seven. We noticed a major gap in the e-learning industry:traditional online courses were flat, boring, and uninspiring. We asked ourselves a simple question: 'What if learning could be as engaging as entertainment?' That question became the foundation of Imtyaz.",
+    "We began experimenting with ways to combine design, production, and education into one seamless experience. The goal was to make e-learning: Visually rich , Interactive , Enjoyable. We developed our first prototypes by merging graphics, storytelling, and motion design with standard course content—this was our first big leap.",
+    "Turning Vision into Reality As we refined our approach, Imtyaz evolved from a creative concept into a specialized e-learning brand. We started producing full-scale, high-quality learning modules, transforming dull lessons into engaging digital experiences. Our focus shifted from just content creation to impactful learning design that drives real results.",
+    "Today, Imtyaz is a comprehensive e-learning solutions company with a clear mission: to revolutionize digital education through creativity, technology, and engagement. Our services now include: Corporate Training Programs tailored to organizational needs. Custom Interactive Courses with branded design. Gamified Learning Modules that boost retention and motivation. Video-Based Microlearning for fast, effective learning. We don’t just deliver courses—we deliver learning experiences that stick.",
+    "Imtyaz is continuously innovating. Our next step is integrating AI-driven personalization and immersive technologies (AR/VR) to make learning smarter, adaptive, and deeply interactive. We believe education should never feel like a chore—it should feel like an experience you look forward to.",
   ];
   return (
     <section className="flex flex-col items-center my-20 max-w-3xl mx-auto">
@@ -122,7 +135,8 @@ const Contact = () => {
             Let’s work together!
           </h2>
           <p className="text-xl ">
-            If you&apos;re intersted in working with our team or want to work with us please contact us and leave a little message 
+            If you&apos;re intersted in working with our team or want to work
+            with us please contact us and leave a little message
           </p>
         </div>
         <div className="flex relative flex-wrap justify-between basis-2/3">

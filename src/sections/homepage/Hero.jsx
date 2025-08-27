@@ -19,7 +19,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
           >
             <h1 className="font-semibold text-3xl lg:text-4xl">
-              It&apos;s Ibrahim Elmur
+              It&apos;s Ibrahim Abdelrhman Elmur
             </h1>
           </motion.div>
           <motion.div
@@ -28,11 +28,15 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
           >
             <p className=" mb-5 bg-gradient-to-r from-brand to-white text-transparent bg-clip-text font-extrabold text-4xl lg:text-7xl">
-              Full stack designer & entrepreneur
+              Entrepreneur & Content Creator
             </p>
           </motion.div>
-          <div className=" my-10 mx-auto w-[80%] block  lg:hidden overflow-hidden border-gray-700 border-2 rounded-3xl rotate-6 hover:rotate-0 hover:border-brand hover:brightness-110 cursor-pointer duration-500 shadow-3xl">
-            <Image src={elmur} alt="profile picture" className="object-fit h-full w-full" />
+          <div className=" my-10 mx-auto w-[90%] block  lg:hidden overflow-hidden border-gray-700 border-2 rounded-3xl rotate-6 hover:rotate-0 hover:border-brand hover:brightness-110 cursor-pointer duration-500 shadow-3xl">
+            <Image
+              src={elmur}
+              alt="profile picture"
+              className="object-fit h-full w-full"
+            />
           </div>
           <motion.div
             initial={{ y: -600 }}
@@ -40,7 +44,8 @@ export default function Hero() {
             animate={{ y: 0 }}
           >
             <p className=" mb-5 text-xl">
-              I try to find opportunities in any small growing bussiness to help it reach its full potential and scale to larger audience 
+              Crafting Scalable Digital Experiences for Businesses That Want to
+              Lead
             </p>
           </motion.div>
           <motion.div
@@ -49,7 +54,10 @@ export default function Hero() {
             animate={{ y: 0 }}
           >
             <div className="flex items-center mt-10 gap-5 lg:gap-10 text-lg">
-              <Link href="/contact" className="border-brand border-2 hover:bg-brand duration-300 rounded-full px-4 py-2  ">
+              <Link
+                href="/contact"
+                className="border-brand border-2 hover:bg-brand duration-300 rounded-full px-4 py-2  "
+              >
                 <FaPhoneAlt className="inline mr-2" />
                 Contact me
               </Link>
@@ -57,7 +65,11 @@ export default function Hero() {
           </motion.div>
         </div>
         <div className="h-[60vh] hidden lg:block overflow-hidden ml-auto mr-5 border-gray-700 border-2 rounded-3xl rotate-6 hover:rotate-0 hover:border-brand hover:brightness-110 cursor-pointer duration-500 shadow-3xl">
-          <Image src={elmur} alt="profile picture" className="object-fit h-full w-full" />
+          <Image
+            src={elmur}
+            alt="profile picture"
+            className="object-fit h-full w-full"
+          />
         </div>
       </div>
     </section>
