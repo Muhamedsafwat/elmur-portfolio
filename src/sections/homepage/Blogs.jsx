@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
-import { blogs } from "@/app/blogs/blogs";
+import { blogs } from "@/app/[locale]/blogs/blogs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,13 +13,13 @@ const Blogs = () => {
         Recent Blogs
       </h2>
       <p className="max-w-2xl text-center text-lg mx-6 lg:mx-auto">
-        Just a little chatting and writing out my thoughts and updates 
+        Just a little chatting and writing out my thoughts and updates
       </p>
 
       <div className="flex justify-center gap-10 mt-10 flex-col lg:flex-row">
         {blogs.map((item, index) => (
           <Link
-          href={`/blogs/${index}`}
+            href={`/blogs/${index}`}
             key={index}
             className="relative overflow-hidden rounded-xl mx-2 lg:w-[26%] aspect-[5/4]  group cursor-pointer"
           >
@@ -41,6 +41,5 @@ const Blogs = () => {
     </section>
   );
 };
-
 
 export default Blogs;

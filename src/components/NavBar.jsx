@@ -6,8 +6,9 @@ import Link from "next/link";
 //import icons
 import { FaChevronDown } from "react-icons/fa";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
+import { BiGlobe } from "react-icons/bi";
 
-const NavBar = () => {
+const NavBar = ({ locale }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [partnersVisible, setPartnersVisible] = useState(false);
   //change nav bar on scroll
@@ -51,6 +52,12 @@ const NavBar = () => {
         {/* desktop navbar */}
         <nav className="hidden lg:block">
           <ul className="flex gap-8 text-lg font-medium">
+            <Link
+              href={`/${locale === "en" ? "ar" : "en"}`}
+              className="text-gray-100 hover:text-brand font-semibold flex items-center gap-1"
+            >
+              {locale === "en" ? "العربية" : "English"} <BiGlobe size={20} />
+            </Link>
             <li className={listItemStyle}>
               <Link href="/">Home</Link>
             </li>

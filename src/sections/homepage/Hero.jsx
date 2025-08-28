@@ -5,7 +5,10 @@ import elmur from "@/assets/elmur.jpg";
 import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
 
+import { useTranslations } from "next-intl";
+
 export default function Hero() {
+  const t = useTranslations("hero");
   return (
     <section className="flex mt-10 lg:mt-0 text-white flex-col justify-center items-center relative text-2xl bg-black lg:h-screen">
       <div className="w-screen lg:h-screen object-cover object-top absolute z-0">
@@ -18,9 +21,7 @@ export default function Hero() {
             transition={{ type: "spring", duration: 0.5, delay: 1 }}
             animate={{ y: 0, opacity: 1 }}
           >
-            <h1 className="font-semibold text-3xl lg:text-4xl">
-              It&apos;s Ibrahim Abdelrhman Elmur
-            </h1>
+            <h1 className="font-semibold text-3xl lg:text-4xl">{t("title")}</h1>
           </motion.div>
           <motion.div
             initial={{ y: -600, opacity: 0 }}
@@ -28,7 +29,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1 }}
           >
             <p className=" mb-5 bg-gradient-to-r from-brand to-white text-transparent bg-clip-text font-extrabold text-4xl lg:text-7xl">
-              Entrepreneur & Content Creator
+              {t("subTitle")}
             </p>
           </motion.div>
           <div className=" my-10 mx-auto w-[90%] block  lg:hidden overflow-hidden border-gray-700 border-2 rounded-3xl rotate-6 hover:rotate-0 hover:border-brand hover:brightness-110 cursor-pointer duration-500 shadow-3xl">
@@ -43,10 +44,7 @@ export default function Hero() {
             transition={{ type: "spring", duration: 0.5, delay: 0.5 }}
             animate={{ y: 0 }}
           >
-            <p className=" mb-5 text-xl">
-              Crafting Scalable Digital Experiences for Businesses That Want to
-              Lead
-            </p>
+            <p className=" mb-5 text-xl">{t("des")}</p>
           </motion.div>
           <motion.div
             initial={{ y: -700 }}
@@ -55,11 +53,11 @@ export default function Hero() {
           >
             <div className="flex items-center mt-10 gap-5 lg:gap-10 text-lg">
               <Link
-                href="/contact"
+                href={`/contact`}
                 className="border-brand border-2 hover:bg-brand duration-300 rounded-full px-4 py-2  "
               >
                 <FaPhoneAlt className="inline mr-2" />
-                Contact me
+                {t("learn_more")}
               </Link>
             </div>
           </motion.div>

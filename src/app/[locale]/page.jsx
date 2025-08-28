@@ -6,7 +6,7 @@ import {
   Services,
   Blogs,
   Partners,
-} from "../sections/homepage";
+} from "../../sections/homepage";
 export default function Home() {
   return (
     <>
